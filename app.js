@@ -12,7 +12,7 @@ const dotenv=require("dotenv")
 const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const User = require('./models/User');
-// const GeneratedProject = require('./models/Project')
+/// const GeneratedProject = require('./models/Project')
 
 
 dotenv.config()
