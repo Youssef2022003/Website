@@ -1,0 +1,151 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="css/bootstrap.min.css" rel="stylesheet" >
+	<link href="css/font-awesome.min.css" rel="stylesheet" >
+	<link href="css/global.css" rel="stylesheet">
+	<link href="css/about.css" rel="stylesheet">
+  <link href="css/upload.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+ 
+    <title>
+        Upload Page
+    </title>
+</head>
+<body>
+    <section id="header">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow_box" id="navbar_sticky">
+          <div class="container-xl">
+            <a class="text-black p-0 navbar-brand fw-bold me-0" href="index.html"><i class="fa fa-recycle me-1 col_green align-middle"></i> Recycling</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav mb-0 nav_left ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                </li>
+                 
+                <li class="nav-item">
+                  <a class="nav-link active" href="about.html">About </a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="services.html">Services </a>
+                </li>
+                
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Team
+                  </a>
+                  <ul class="dropdown-menu drop_1" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="team.html"> Team</a></li>
+                    <li><a class="dropdown-item border-0" href="detail.html"> Team Detail</a></li>
+                  </ul>
+                </li>
+                
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Blog
+                  </a>
+                  <ul class="dropdown-menu drop_1" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="blog.html"> Blog</a></li>
+                    <li><a class="dropdown-item border-0" href="blog_detail.html"> Blog Detail</a></li>
+                  </ul>
+                </li>
+                
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Pages
+                  </a>
+                  <ul class="dropdown-menu drop_1" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="faq.html"> Faq</a></li>
+                    <li><a class="dropdown-item border-0" href="contact.html"> Contact Us</a></li>
+                  </ul>
+                </li>
+                
+              </ul>
+              <ul class="navbar-nav mb-0 ms-auto mt-1">
+                <li class="nav-item">
+                  <a class="nav-link social_link" href="#"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link social_link mx-2" href="#"><i class="fa fa-instagram"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link social_link" href="#"><i class="fa fa-linkedin"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        </section>
+        <div class="main-container">
+          <header class="hero-header">
+            <h1 class="title1">Classify Recyclable Materials</h1>
+            <p class="subtitle">Upload one or more images. Remove any you don't want to classify.</p>
+          </header>
+      
+          <form id="uploadForm" action="/classify" method="POST" enctype="multipart/form-data">
+            <div class="instructions">
+              <strong>Tips for better classification:</strong>
+              <ul class="tips-list">
+                <li>Take photos in good lighting to avoid shadows.</li>
+                <li>Ensure the material is centered and clear in the frame.</li>
+                <li>Use a neutral background if possible.</li>
+                <li>Try to capture the object from a natural angle.</li>
+              </ul>
+            </div>
+            <input type="file" name="images" id="fileInput" accept="image/*" multiple required />
+            <div class="preview-container" id="previewContainer"></div>
+            <button type="submit">Classify</button>
+            <div id="loaderBar" class="loader-bar"></div>
+          </form>
+      
+          <div class="result-section" id="resultSection">
+            <h2 class="title2">Classification Results</h2>
+            <div id="resultsDisplay"></div>
+            <div class="generate-btn-wrapper">
+              <button class="generate-btn"><span class="star-icon">✨</span> Generate</button>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Zoom Lightbox -->
+        <div id="lightbox" class="lightbox">
+          <span class="lightbox-close">&times;</span>
+          <img class="lightbox-img" src="" alt="Zoomed Image" />
+        </div>
+
+
+
+
+
+        
+
+
+
+
+
+    
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity=
+  "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous">
+</script>
+<script src="./js/upload.js"></script>
+
+
+
+
+ 
+
+  
+
+ 
+</body>
+</html>
